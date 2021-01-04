@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftyConst",
     products: [
-        .executable(name: "SwiftyConst", targets: ["SwiftyConst"]),
+        .executable(name: "swifty-const", targets: ["SwiftyConst"]),
     ],
     dependencies: [
         .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .exact("0.50300.0")),

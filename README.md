@@ -24,7 +24,7 @@ $ swift build -c release
 
 ## Run
 ```
-$ ./.build/release/SwiftyConst <Input Swift file path> --output <Output swift file path>
+$ ./.build/release/swifty-const <Input Swift file path> --output <Output swift file path>
 ```
 
 
