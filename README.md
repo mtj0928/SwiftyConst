@@ -16,13 +16,20 @@ The components must be joined with `__`.
 - type: This is an optional component. You can select `text` or `num`.  The default value is `text`
 - default value: This is an optional component. You can set default value when the enviroment value does not exist.
 
+## Installation
+## Using with Mint
+```
+$ mint install mtj0928/SwiftyConst
+$ swifty-const --help
+```
 
-## Build
+### Manual
+### Build
 ```
 $ swift build -c release
 ```
 
-## Run
+### Run
 ```
 $ ./.build/release/swifty-const <Input Swift file path> --output <Output swift file path>
 ```
