@@ -23,7 +23,7 @@ $ mint install mtj0928/SwiftyConst
 $ swifty-const --help
 ```
 
-### Manual
+## Manual
 ### Build
 ```
 $ swift build -c release
