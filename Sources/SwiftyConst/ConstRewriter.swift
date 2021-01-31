@@ -4,9 +4,11 @@ import SwiftSyntax
 class ConstRewriter: SyntaxRewriter {
 
     let baseFileURL: URL
+    private let constProvider: ConstProvoder
 
-    init(_ baseFileURL: URL) {
+    init(_ baseFileURL: URL, with constProvider: ConstProvoder) {
         self.baseFileURL = baseFileURL
+        self.constProvider = constProvider
 
         super.init()
     }
@@ -53,7 +55,7 @@ class ConstRewriter: SyntaxRewriter {
         }
 
         let enviromentKey = commands[1]
-        let value = ProcessInfo.processInfo.environment[enviromentKey]
+        let value = constProvider.value(for: enviromentKey)
 
         if commands.count == 2 {
             let literal = SyntaxFactory.makeStringLiteralExpr(value ?? identifier)
