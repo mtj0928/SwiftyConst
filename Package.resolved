@@ -2,21 +2,21 @@
   "object": {
     "pins": [
       {
+        "package": "ColorizeSwift",
+        "repositoryURL": "https://github.com/mtynior/ColorizeSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "2a354639173d021f4648cf1912b2b00a3a7cd83c",
+          "version": "1.6.0"
+        }
+      },
+      {
         "package": "swift-argument-parser",
         "repositoryURL": "https://github.com/apple/swift-argument-parser",
         "state": {
           "branch": null,
           "revision": "92646c0cdbaca076c8d3d0207891785b3379cbff",
           "version": "0.3.1"
-        }
-      },
-      {
-        "package": "swift-log",
-        "repositoryURL": "https://github.com/apple/swift-log.git",
-        "state": {
-          "branch": null,
-          "revision": "173f567a2dfec11d74588eea82cecea555bdc0bc",
-          "version": "1.4.0"
         }
       },
       {

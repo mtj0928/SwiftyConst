@@ -1,9 +1,7 @@
 import ArgumentParser
+import ColorizeSwift
 import Foundation
-import Logging
 import SwiftSyntax
-
-let logger = Logger(label: "SwiftyConst")
 
 struct SwiftyConst: ParsableCommand {
 
@@ -18,13 +16,14 @@ struct SwiftyConst: ParsableCommand {
         let root = try SyntaxParser.parse(inputURL)
         let rewriter = ConstRewriter(inputURL)
         let rewritedRoot = rewriter.visit(root)
-        logger.info("Succeed in embedding some constants.")
+
+        print("Succeed in embedding some constants.".green().bold())
 
         if let outputPath = output.flatMap(URL.init(fileURLWithPath:)) {
             try rewritedRoot.description
                 .write(to: outputPath, atomically: true, encoding: .utf8)
-            logger.info("Embed swift file is generated to \(output!).")
-            logger.info("Don't forgot to add the file to .gitignore!")
+            print("Embed swift file is generated to \(output!).")
+            print("🚨 Don't forgot to add the file to .gitignore!".red().bold())
         } else {
             print("")
             print(rewritedRoot)
