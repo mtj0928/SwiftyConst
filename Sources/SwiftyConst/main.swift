@@ -27,7 +27,7 @@ struct SwiftyConst: ParsableCommand {
             try rewritedRoot.description
                 .write(to: outputPath, atomically: true, encoding: .utf8)
             print("Embed swift file is generated to \(output!).")
-            print("🚨 Don't forgot to add the file to .gitignore!".red().bold())
+            print("Don't forgot to add the file to .gitignore!".magenta().bold())
         } else {
             print("")
             print(rewritedRoot)
