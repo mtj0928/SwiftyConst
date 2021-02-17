@@ -11,6 +11,7 @@ let package = Package(
     dependencies: [
         .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .exact("0.50300.0")),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.0"),
+        .package(url: "https://github.com/jpsim/Yams.git", from: "4.0.4"),
         .package(url: "https://github.com/mtynior/ColorizeSwift.git", from: "1.6.0"),
     ],
     targets: [
@@ -19,6 +20,7 @@ let package = Package(
             dependencies: [
                 "SwiftSyntax",
                 "ColorizeSwift",
+                "Yams",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]),
         .testTarget(
