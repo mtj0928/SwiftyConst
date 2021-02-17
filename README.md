@@ -17,7 +17,7 @@ The components must be joined with `__`.
 - default value: This is an optional component. This value will be embed when the value which matches the key does not exist.
 
 ## Installation
-Mint
+### Mint
 ```
 $ mint install mtj0928/SwiftyConst
 $ swifty-const --help
