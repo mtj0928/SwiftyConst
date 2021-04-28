@@ -18,7 +18,7 @@ class ConstRewriter: SyntaxRewriter {
     override func visit(_ node: SourceFileSyntax) -> Syntax {
         var modifiedNode = super.visit(node)
 
-        let aaa = modifiedNode.leadingTrivia?
+        let header = modifiedNode.leadingTrivia?
             .appending(.lineComment("//"))
             .appending(.newlines(1))
             .appending(.lineComment("// DO NOT MODIFY THIS FILE"))
@@ -31,7 +31,7 @@ class ConstRewriter: SyntaxRewriter {
             .appending(.newlines(1))
             .appending(.lineComment("//"))
             .appending(.newlines(2))
-        modifiedNode.leadingTrivia = aaa
+        modifiedNode.leadingTrivia = header
         return Syntax(modifiedNode)
     }
 
