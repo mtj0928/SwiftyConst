@@ -3,8 +3,6 @@
 
 import PackageDescription
 
-let rpath = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx"
-
 let package = Package(
     name: "SwiftyConst",
     products: [
@@ -24,9 +22,6 @@ let package = Package(
                 "ColorizeSwift",
                 "Yams",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            ],
-            linkerSettings: [
-                .unsafeFlags(["-rpath", rpath])
             ]
         )
     ]
