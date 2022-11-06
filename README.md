@@ -1,6 +1,6 @@
 # SwiftyConst
 
-SwiftyConst can automatically embe your constant values to Swift files.  
+SwiftyConst can automatically embed your constant values to Swift files. 
 
 ## Input File
 Prepare such following swift file.

@@ -20,7 +20,7 @@ let package = Package(
         .target(
             name: "SwiftyConst",
             dependencies: [
-                "SwiftSyntax",
+                .product(name: "SwiftSyntaxParser", package: "SwiftSyntax"),
                 "ColorizeSwift",
                 "Yams",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),

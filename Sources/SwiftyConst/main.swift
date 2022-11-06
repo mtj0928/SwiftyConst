@@ -1,4 +1,5 @@
 import ArgumentParser
+import SwiftSyntaxParser
 import ColorizeSwift
 import Foundation
 import SwiftSyntax
