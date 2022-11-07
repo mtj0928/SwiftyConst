@@ -1,5 +1,5 @@
 //
-//  EnviromentProvider.swift
+//  ConstProvider.swift
 //  SwiftyConst
 //
 //  Created by Junnosuke Matsumoto on 2021/01/31.
@@ -8,17 +8,17 @@
 import Foundation
 import Yams
 
-protocol ConstProvoder {
+protocol ConstProvider {
     func value(for key: String) -> String?
 }
 
-class EnviromentValueProvider: ConstProvoder {
+class EnvironmentValueProvider: ConstProvider {
     func value(for key: String) -> String? {
         ProcessInfo.processInfo.environment[key]
     }
 }
 
-class YamlValueProvider: ConstProvoder {
+class YamlValueProvider: ConstProvider {
 
     let values: [String: String]
 

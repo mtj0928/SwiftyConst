@@ -4,9 +4,9 @@ import SwiftSyntax
 class ConstRewriter: SyntaxRewriter {
 
     let baseFileURL: URL
-    private let constProvider: ConstProvoder
+    private let constProvider: ConstProvider
 
-    init(_ baseFileURL: URL, with constProvider: ConstProvoder) {
+    init(_ baseFileURL: URL, with constProvider: ConstProvider) {
         self.baseFileURL = baseFileURL
         self.constProvider = constProvider
 
