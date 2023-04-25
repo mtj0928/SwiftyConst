@@ -5,11 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftyConst",
+    platforms: [.macOS(.v10_15)],
     products: [
         .executable(name: "swifty-const", targets: ["SwiftyConst"]),
     ],
     dependencies: [
-        .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .exact("0.50700.0")),
+        .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .exact("508.0.0")),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.0"),
         .package(url: "https://github.com/jpsim/Yams.git", from: "4.0.4"),
         .package(url: "https://github.com/mtynior/ColorizeSwift.git", from: "1.6.0"),
