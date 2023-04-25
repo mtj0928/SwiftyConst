@@ -17,7 +17,7 @@ class ConstRewriter: SyntaxRewriter {
         case text, num
     }
 
-    override func visit(_ node: SourceFileSyntax) -> Syntax {
+    override func visit(_ node: SourceFileSyntax) -> SourceFileSyntax {
         var modifiedNode = super.visit(node)
 
         let header = modifiedNode.leadingTrivia?
@@ -34,7 +34,7 @@ class ConstRewriter: SyntaxRewriter {
             .appending(.lineComment("//"))
             .appending(.newlines(2))
         modifiedNode.leadingTrivia = header
-        return Syntax(modifiedNode)
+        return SourceFileSyntax(modifiedNode)!
     }
 
     override func visit(_ node: IdentifierExprSyntax) -> ExprSyntax {
